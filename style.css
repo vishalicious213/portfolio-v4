@@ -1,4 +1,9 @@
+:root {
+    --main-color: #FFFFFF;
+    --background-1: #282C34;
+}
+
 body {
-    background-color: #282c34;
-    color: white;
+    background-color: var(--background-1);
+    color: var(--main-color);
 }
