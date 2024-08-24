@@ -37,6 +37,11 @@ button:hover {
     height: 2rem;
 }
 
+.divider-2 {
+    background-image: linear-gradient(to right top, var(--background-1) 49%, var(--background-2) 50%);
+    height: 2rem;
+}
+
 /* MAIN */
 
 main {
