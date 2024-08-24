@@ -97,7 +97,7 @@ main p {
     color: var(--main-text);
 }
 
-/* SERVICES */
+/* PITCH */
 
 .pitch {
     background-color: var(--secondary-back);
@@ -107,4 +107,10 @@ main p {
 
 .work-buttons {
     margin-top: 2rem;
+}
+
+/* SERVICES */
+
+.services {
+    background-color: var(--secondary-back);
 }
