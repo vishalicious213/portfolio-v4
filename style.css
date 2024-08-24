@@ -1,5 +1,6 @@
 :root {
     --main-color: #FFFFFF;
+    --secondary-color: #FFFFFFBF;
     --background-1: #282C34;
     --background-2: #4c5c96;
 }
@@ -8,13 +9,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Raleway", Helvetica, sans-serif;
 }
 
 body {
     background-color: var(--background-1);
     color: var(--main-color);
-    font-family: "Raleway", Helvetica, sans-serif;
     padding: 2rem 1rem;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 /* MAIN */
@@ -35,4 +40,15 @@ main span {
 
 main p {
     margin-bottom: 2rem;
+    padding: 0 1rem;
+    color: var(--secondary-color);
+}
+
+main button {
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border-radius: .25rem;
+    margin: none;
 }
