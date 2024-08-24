@@ -1,9 +1,11 @@
 :root {
     --main-color: #FFFFFF;
     --background-1: #282C34;
+    --background-2: #4c5c96;
 }
 
 body {
     background-color: var(--background-1);
     color: var(--main-color);
+    font-family: Raleway, Helvetica, sans-serif;
 }
