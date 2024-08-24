@@ -47,6 +47,10 @@ button:hover {
     height: 2rem;
 }
 
+.hidden {
+    display: none;
+}
+
 /* MAIN */
 
 main {
@@ -77,6 +81,7 @@ main button {
 
 main button:hover {
     background-color: var(--accent);
+    color: var(--main-text);
 }
 
 /* SERVICES */
