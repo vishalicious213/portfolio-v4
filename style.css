@@ -15,23 +15,33 @@
 body {
     background-color: var(--background-1);
     color: var(--main-color);
-    padding: 2rem 1rem;
+}
+
+h1, h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
 }
 
 button:hover {
     cursor: pointer;
 }
 
+.divider-1 {
+    background-image: linear-gradient(to right bottom, var(--background-1) 49%, var(--background-2) 50%);
+    height: 2rem;
+}
+
 /* MAIN */
 
 main {
     text-align: center;
-}
-
-main h1 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
+    padding: 2rem 1rem;
 }
 
 main span {
@@ -39,9 +49,9 @@ main span {
 }
 
 main p {
+    color: var(--secondary-color);
     margin-bottom: 2rem;
     padding: 0 1rem;
-    color: var(--secondary-color);
 }
 
 main button {
@@ -50,5 +60,12 @@ main button {
     margin-bottom: 1rem;
     padding: 1rem 0;
     border-radius: .25rem;
-    margin: none;
+    border: none;
+}
+
+/* SERVICES */
+
+.services {
+    background-color: var(--background-2);
+    padding: 2rem 1rem;
 }
