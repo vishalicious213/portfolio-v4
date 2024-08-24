@@ -81,6 +81,23 @@ main p {
     padding: 0 1rem;
 }
 
+/* MAIN - SOCIAL */
+
+.social {
+    font-size: 1.25rem;
+
+}
+
+.social a {
+    text-decoration: none;
+    color: var(--secondary-text);
+    padding: 0 .25rem;
+}
+
+.social a:hover {
+    color: var(--main-text);
+}
+
 /* SERVICES */
 
 .pitch {
