@@ -29,7 +29,21 @@ p {
     margin-bottom: 1rem;
 }
 
+button {
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border-radius: .25rem;
+    border: 2px solid var(--accent);
+    outline: none;
+    background-color: transparent;
+    color: var(--secondary-text);
+}
+
 button:hover {
+    background-color: var(--accent);
+    color: var(--main-text);
     cursor: pointer;
 }
 
@@ -67,25 +81,11 @@ main p {
     padding: 0 1rem;
 }
 
-main button {
-    text-transform: uppercase;
-    width: 100%;
-    margin-bottom: 1rem;
-    padding: 1rem 0;
-    border-radius: .25rem;
-    border: 2px solid var(--accent);
-    outline: none;
-    background-color: transparent;
-    color: var(--secondary-text);
-}
-
-main button:hover {
-    background-color: var(--accent);
-    color: var(--main-text);
-}
-
 /* SERVICES */
 
 .services {
     background-color: var(--secondary-back);
 }
+
+/* MY-WORK */
+
