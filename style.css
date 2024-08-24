@@ -109,6 +109,11 @@ main p {
     margin-top: 2rem;
 }
 
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
 /* SERVICES */
 
 .services {
