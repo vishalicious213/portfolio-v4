@@ -37,7 +37,7 @@ const appsArray = [
         title: "Task List",
         view: "https://vish213-task-list.netlify.app/",
         code: "https://github.com/vishalicious213/tasks-firebase",
-        desc: "Shopping list (with separate regular and bulk items section), To-Do list and Notes section. Built this for my family. Uses Firebase Realtime Database to store and update data.",
+        desc: "A combination shopping list, to-do list and notes app that I built for my family of cat girls. It uses the Firebase Realtime Database to store and update data so changes are visible to everyone immediately.",
         stack: ["html", "css", "js", "fb"]
     }
 ]
