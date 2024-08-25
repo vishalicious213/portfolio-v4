@@ -12,6 +12,15 @@ const appsArray = [
         code: "https://github.com/vishalicious213/movies",
         desc: "Uses the OMDB (Online Movie Database) API to get movie info from user searches. Users can add movies to or remove movies from a personal watchlist. Includes pagination for more results.",
         stack: ["html", "css", "js"]
+    },
+    {
+        id: 2,
+        img: "img/projects/jimmys-diner.jpg",
+        title: "Jimmy's Diner",
+        view: "https://vish213-jimmys-diner.netlify.app/",
+        code: "https://github.com/vishalicious213/restaurant-ordering-app",
+        desc: "Jimmy's Diner serves the best burgers and pizzas in town. Their website was prepared using the finest JS including arrays, objects and a sampler platter teeming with JS methods and CSS goodies.",
+        stack: ["html", "css", "js"]
     }
 ]
 
@@ -66,7 +75,7 @@ function renderApps(arr) {
                     </div>
                     <section class="project-info">
                         <p class="project-desc">${proj.desc}</p>
-                        <div id=${proj.id}-stack class="stack">${stack}</div>
+                        <div class="stack">${stack}</div>
                     </section>
                 </div>
             </section>
