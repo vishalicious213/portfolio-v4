@@ -266,3 +266,13 @@ footer {
         margin: 0 auto;
     }
 }
+
+@media screen and (min-width: 750px) {
+    h1, h2, h3 {
+        font-size: 2.25rem;
+    }
+
+    p, h4 {
+        font-size: 1.25rem;
+    }
+}
