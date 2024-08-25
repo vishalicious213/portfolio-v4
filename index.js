@@ -39,7 +39,7 @@ function renderApps(arr) {
                 case "js": return `<img src="img/javascript-color.svg" alt=""></img>`
                 default: return null
             }
-        })
+        }).join("")
 
         apps.innerHTML += `
             <section class="project">
