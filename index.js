@@ -10,7 +10,7 @@ const appsArray = [
         title: "Movies Watchlist",
         view: "https://vish213-movies.netlify.app/",
         code: "https://github.com/vishalicious213/movies",
-        desc: "Uses the OMDB (Online Movie Database) API to get movie info from user searches. Users can add movies to or remove movies from a personal watchlist. Includes pagination for more results.",
+        desc: "Add or remove movies from your personal watchlist. Search for a movie and get information from the OMDB (Online Movie Database) API about it. Save the ones you want to see for later.",
         stack: ["html", "css", "js"]
     },
     {
