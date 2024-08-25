@@ -108,7 +108,7 @@
         
         <form action="" id="contact-form">
             <div class='form-half'>
-                <label htmlFor='name'>NAME</label>
+                <label for='name'>NAME</label>
                 <input
                     id='name'
                     name='name'
@@ -117,7 +117,7 @@
                     class='field'
                 />
                 
-                <label htmlFor='email'>EMAIL</label>
+                <label for='email'>EMAIL</label>
                 <input
                     id='email'
                     name='email'
@@ -126,7 +126,7 @@
                     class='field'
                 />
                 
-                <label htmlFor='phone'>PHONE</label>
+                <label for='phone'>PHONE</label>
                 <input
                     id='phone'
                     name='phone'
@@ -134,6 +134,18 @@
                     placeholder='phone'
                     class='field'
                 />
+            </div>
+
+            <div className='form-half'>
+                <label for='message'>MESSAGE</label>
+                <textarea 
+                    id="message"
+                    name="message" 
+                    placeholder='phone'
+                    class='field'
+                ></textarea>
+
+                <button id='contact-button' type='submit'>SEND MESSAGE</button>
             </div>
         </form>
     </section>
