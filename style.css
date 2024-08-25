@@ -141,8 +141,9 @@ main p {
 }
 
 .project h4 {
-    margin-top: 1rem;
-    text-transform: uppercase;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--secondary-text);
 }
 
 .project a {
