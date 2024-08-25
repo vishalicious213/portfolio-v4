@@ -148,7 +148,7 @@ main p {
 }
 
 form {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     margin: 2rem 0;
 }
 
@@ -167,4 +167,17 @@ label {
 
 input {
     margin-bottom: 1.5rem;
+}
+
+.field {
+    background: var(--accent);
+    color: var(--main-text);
+    outline: none;
+    border: 1px solid var(--secondary-text);
+    border-radius: .35rem;
+    padding: 1rem;
+}
+
+.field:focus {
+    border: 1px solid var(--main-text);
 }
