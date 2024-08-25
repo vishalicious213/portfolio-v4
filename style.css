@@ -114,20 +114,19 @@ main p {
 }
 
 .gallery {
-    outline: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.project {
-    outline: 1px solid orange;
+.project h4 {
+    padding: 0 .5rem;
 }
 
 .project-buttons {
     display: flex;
-    justify-content: space-around;
-    padding: 1rem 0;
+    justify-content: space-between;
+    padding: 1rem .5rem;
     border-top: 1px solid var(--accent);
     border-bottom: 1px solid var(--accent);
     margin: 1rem 0;
@@ -156,8 +155,22 @@ main p {
     color: var(--secondary-text);
 }
 
+.project-info {
+    display: flex;
+    padding: 0 .5rem;
+}
+
+.project-desc {
+    margin-right: .5rem;
+}
+
+.stack {
+    border-left: 1px solid var(--accent);
+}
+
 .stack img {
     width: 1.5rem;
+    margin: 0 0 .5rem .5rem;
 }
 
 /* SERVICES */
