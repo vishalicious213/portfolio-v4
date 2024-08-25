@@ -119,8 +119,14 @@ main p {
     align-items: center;
 }
 
+.screenshot {
+    width: 100%;
+}
+
 .project h4 {
+    margin-top: 1rem;
     padding: 0 .5rem;
+    text-transform: uppercase;
 }
 
 .project-buttons {
