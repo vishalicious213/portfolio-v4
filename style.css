@@ -164,3 +164,7 @@ label {
     letter-spacing: .1rem;
     margin-bottom: .5rem;
 }
+
+input {
+    margin-bottom: 1.5rem;
+}
