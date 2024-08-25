@@ -321,7 +321,7 @@ footer {
     .gallery {
         flex-direction: row;
         justify-content: center;
-        align-items: flex-start;
+        align-items: stretch;
         flex-wrap: wrap;
     }
 
@@ -383,4 +383,11 @@ footer {
     .project {
         width: 31%;
     }
+}
+
+@media screen and (min-width: 1500px) {
+    .project {
+        width: 23%;
+    }
+
 }
