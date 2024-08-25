@@ -369,3 +369,15 @@ footer {
         font-size: 1.25rem;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .gallery {
+        width: 90%;
+        margin: 2rem auto 0;
+        justify-content: flex-start;
+    }
+
+    .project {
+        width: 31%;
+    }
+}
