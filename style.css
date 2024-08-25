@@ -140,3 +140,9 @@ main p {
     margin-bottom: 1rem;
     color: var(--secondary-text);
 }
+
+/* CONTACT */
+
+.contact {
+    background-color: var(--secondary-back);
+}
