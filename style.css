@@ -243,3 +243,15 @@ footer {
         margin: 0 0 2.9rem;
     }
 }
+
+@media screen and (min-width: 720px) {
+    h1, h2, h3 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin: 1rem 0 2rem;
+    }
+
+    p, h4 {
+        font-size: 1.15rem;
+    }
+}
