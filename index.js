@@ -44,7 +44,9 @@ function renderApps(arr) {
         apps.innerHTML += `
             <section class="project">
                 <div>
-                    <img class="screenshot" src=${proj.img} alt="">
+                    <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+                        <img class="screenshot" src=${proj.img} alt="">
+                    </a>
                 </div>
                 <div class="inner-project-container">
                     <h4>${proj.title}</h4>
