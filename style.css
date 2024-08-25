@@ -156,6 +156,9 @@ main p {
     color: var(--secondary-text);
 }
 
+.stack img {
+    width: 1.5rem;
+}
 
 /* SERVICES */
 
