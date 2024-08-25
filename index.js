@@ -21,6 +21,15 @@ const appsArray = [
         code: "https://github.com/vishalicious213/restaurant-ordering-app",
         desc: "Jimmy's Diner serves the best burgers and pizzas in town. Their website was prepared using the finest JS including arrays, objects and a sampler platter teeming with JS methods and CSS goodies.",
         stack: ["html", "css", "js"]
+    },
+    {
+        id: 3,
+        img: "img/projects/locator.jpg",
+        title: "Locator App",
+        view: "https://vish213-locator.netlify.app/",
+        code: "https://github.com/vishalicious213/locator",
+        desc: "Progressive Web App that displays current location, local map and weather & temperature information for when I'm driving. Uses Open Weather API and Google Maps API.",
+        stack: ["html", "css", "js"]
     }
 ]
 
