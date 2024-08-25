@@ -260,4 +260,9 @@ footer {
     p, h4 {
         font-size: 1.15rem;
     }
+
+    .inner-container {
+        max-width: 720px;
+        margin: 0 auto;
+    }
 }
