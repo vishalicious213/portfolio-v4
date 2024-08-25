@@ -127,10 +127,13 @@ main p {
 
 .project {
     background-color: var(--third-back);
+    border-radius: .5rem;
 }
 
 .screenshot {
     width: 100%;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
 }
 
 .inner-project-container {
