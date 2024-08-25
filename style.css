@@ -186,3 +186,15 @@ textarea {
     width: 100%;
     margin: .5rem 0 1.5rem;
 }
+
+.contact button {
+    background-color: var(--accent);
+    color: var(--secondary-text);
+    border: 1px solid var(--secondary-text);
+}
+
+.contact button:hover {
+    background-color: var(--main-back);
+    color: var(--main-text);
+    border: 1px solid var(--main-text);
+}
