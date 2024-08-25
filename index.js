@@ -8,6 +8,7 @@ appBtn.addEventListener("click", () => {
     apps.classList.add("gallery")
     sites.classList.add("hidden")
     sites.classList.remove("gallery")
+    renderApps()
 })
 
 webBtn.addEventListener("click", () => {    
@@ -16,3 +17,9 @@ webBtn.addEventListener("click", () => {
     apps.classList.add("hidden")
     apps.classList.remove("gallery")
 })
+
+function renderApps() {
+    apps.innerHTML = `
+        <h1>Updated Applications</h1>
+    `
+}
