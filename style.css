@@ -3,7 +3,9 @@
     --secondary-text: #DCDCDC;
     --main-back: #282C34;
     --secondary-back: #4c5c96;
+    --third-back: #353849;
     --accent: #414a65;
+    --accent2: #778899;
 }
 
 * {
@@ -119,22 +121,32 @@ main p {
     align-items: center;
 }
 
+/* MY-WORK - PROJECTS */
+
+.project {
+    background-color: var(--third-back);
+
+}
+
 .screenshot {
     width: 100%;
 }
 
+.inner-project-container {
+    padding: 0 1rem 1rem 1rem;    
+}
+
 .project h4 {
     margin-top: 1rem;
-    padding: 0 .5rem;
     text-transform: uppercase;
 }
 
 .project-buttons {
     display: flex;
     justify-content: space-between;
-    padding: 1rem .5rem;
-    border-top: 1px solid var(--accent);
-    border-bottom: 1px solid var(--accent);
+    padding: 1rem 0;
+    border-top: 1px solid var(--accent2);
+    border-bottom: 1px solid var(--accent2);
     margin: 1rem 0;
     color: var(--secondary-text);
 }
@@ -142,7 +154,7 @@ main p {
 .visit-site, .view-code {
     border: 2px solid var(--accent);
     border-radius: .25rem;
-    width: 7.5rem;
+    width: 7rem;
     padding: .25rem 0;
     text-align: center;
 }
@@ -163,7 +175,6 @@ main p {
 
 .project-info {
     display: flex;
-    padding: 0 .5rem;
 }
 
 .project-desc {
