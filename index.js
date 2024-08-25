@@ -58,6 +58,8 @@ webBtn.addEventListener("click", () => {
 })
 
 function renderApps(arr) {
+    apps.innerHTML = ""
+    
     arr.map(proj => {
         let stack = proj.stack.map(tech => {
             switch (tech) {
