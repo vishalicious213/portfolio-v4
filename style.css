@@ -119,13 +119,13 @@ main p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
 }
 
 /* MY-WORK - PROJECTS */
 
 .project {
     background-color: var(--third-back);
-
 }
 
 .screenshot {

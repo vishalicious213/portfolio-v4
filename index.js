@@ -43,9 +43,9 @@ function renderApps(arr) {
     arr.map(proj => {
         let stack = proj.stack.map(tech => {
             switch (tech) {
-                case "html": return `<img src="img/html5-color.svg" alt=""></img>`
-                case "css": return `<img src="img/css3-color.svg" alt=""></img>`
-                case "js": return `<img src="img/javascript-color.svg" alt=""></img>`
+                case "html": return `<img src="img/html5.svg" alt=""></img>`
+                case "css": return `<img src="img/css3.svg" alt=""></img>`
+                case "js": return `<img src="img/javascript.svg" alt=""></img>`
                 default: return null
             }
         }).join("")
