@@ -30,6 +30,15 @@ const appsArray = [
         code: "https://github.com/vishalicious213/locator",
         desc: "Progressive Web App that displays current location, local map and weather & temperature information for when I'm driving. Uses Open Weather API and Google Maps API.",
         stack: ["html", "css", "js"]
+    },
+    {
+        id: 4,
+        img: "img/projects/task-list.jpg",
+        title: "Task List",
+        view: "https://vish213-task-list.netlify.app/",
+        code: "https://github.com/vishalicious213/tasks-firebase",
+        desc: "Shopping list (with separate regular and bulk items section), To-Do list and Notes section. Built this for my family. Uses Firebase Realtime Database to store and update data.",
+        stack: ["html", "css", "js", "fb"]
     }
 ]
 
@@ -52,9 +61,10 @@ function renderApps(arr) {
     arr.map(proj => {
         let stack = proj.stack.map(tech => {
             switch (tech) {
-                case "html": return `<img src="img/html5.svg" alt=""></img>`
-                case "css": return `<img src="img/css3.svg" alt=""></img>`
-                case "js": return `<img src="img/javascript.svg" alt=""></img>`
+                case "html": return `<img src="img/html5.svg" title="HTML5" alt="HTML5"></img>`
+                case "css": return `<img src="img/css3.svg" title="CSS3" alt="CSS3"></img>`
+                case "js": return `<img src="img/javascript.svg" title="JavaScript" alt="JavaScript"></img>`
+                case "fb": return `<img src="img/firebase.svg" title="Firebase" alt="Firebase"></img>`
                 default: return null
             }
         }).join("")
