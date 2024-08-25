@@ -141,6 +141,13 @@ main p {
     color: var(--secondary-text);
 }
 
+/* ABOUT-ME */
+
+.about-me img {
+    width: 100%;
+    border-radius: 50%;
+}
+
 /* CONTACT */
 
 .contact {
