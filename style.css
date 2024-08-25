@@ -127,6 +127,11 @@ main p {
 .project-buttons {
     display: flex;
     justify-content: space-around;
+    padding: 1rem 0;
+    border-top: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
+    margin: 1rem 0;
+    color: var(--secondary-text);
 }
 
 .visit-site, .view-code {
@@ -137,9 +142,18 @@ main p {
     text-align: center;
 }
 
+.visit-site:hover, .view-code:hover {
+    background-color: var(--accent);
+    color: var(--main-text);
+}
+
+.visit-site:hover > *, .view-code:hover > * {
+    color: var(--main-text);
+}
+
 .project i, .visit-icon {
     font-size: 1rem;
-    color: var(--main-text);
+    color: var(--secondary-text);
 }
 
 
