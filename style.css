@@ -198,3 +198,11 @@ textarea {
     color: var(--main-text);
     border: 1px solid var(--main-text);
 }
+
+/* FOOTER */
+
+footer {
+    padding: 2rem 0 4rem;
+    height: 5rem;
+    text-align: center;
+}
