@@ -19,7 +19,7 @@ const appsArray = [
         title: "Jimmy's Diner",
         view: "https://vish213-jimmys-diner.netlify.app/",
         code: "https://github.com/vishalicious213/restaurant-ordering-app",
-        desc: "Jimmy's Diner serves the best burgers and pizzas in town. Their website was prepared using the finest JS including arrays, objects and a sampler platter teeming with JS methods and CSS goodies.",
+        desc: "Jimmy's Diner serves the best burgers and pizzas in town. This kiosk/ordering app was prepared using the finest JavaScript and seasoned with arrays, objects and a sprinkling of CSS.",
         stack: ["html", "css", "js"]
     },
     {
@@ -28,7 +28,7 @@ const appsArray = [
         title: "Locator App",
         view: "https://vish213-locator.netlify.app/",
         code: "https://github.com/vishalicious213/locator",
-        desc: "Progressive Web App that displays current location, local map and weather & temperature information for when I'm driving. Uses Open Weather API and Google Maps API.",
+        desc: "I built this Progressive Web App after moving to CA and never knowing what city I was driving through. It shows the city, local map and weather using Open Weather API and the Google Maps API.",
         stack: ["html", "css", "js"]
     },
     {
@@ -59,7 +59,7 @@ webBtn.addEventListener("click", () => {
 
 function renderApps(arr) {
     apps.innerHTML = ""
-    
+
     arr.map(proj => {
         let stack = proj.stack.map(tech => {
             switch (tech) {
