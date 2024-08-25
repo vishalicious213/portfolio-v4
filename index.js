@@ -5,6 +5,7 @@ const sites = document.getElementById("websites")
 
 const appsArray = [
     {
+        id: 1,
         img: "img/projects/movies.jpg",
         title: "Movies Watchlist",
         view: "https://vish213-movies.netlify.app/",
@@ -30,36 +31,43 @@ webBtn.addEventListener("click", () => {
 })
 
 function renderApps(arr) {
-    arr.map(proj => apps.innerHTML += `
-        <section class="project">
-            <div>
-                <img class="screenshot" src=${proj.img} alt="">
-            </div>
-            <div class="inner-project-container">
-                <h4>${proj.title}</h4>
-                <div class="project-buttons">
-                    <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
-                        <div class="visit-site">
-                            <span class="visit-icon">&#x2BC8;</span>
-                            Visit site
-                        </div>
-                    </a>
-                    <a target="_blank" rel="noopener noreferrer" href=${proj.code}>
-                        <div class="view-code">
-                            <i class="fab fa-github"></i>
-                            View code
-                        </div>
-                    </a>
+    arr.map(proj => {
+        let stack = proj.stack.map(tech => {
+            switch (tech) {
+                case "html": return `<img src="img/html5-color.svg" alt=""></img>`
+                case "css": return `<img src="img/css3-color.svg" alt=""></img>`
+                case "js": return `<img src="img/javascript-color.svg" alt=""></img>`
+                default: return null
+            }
+        })
+
+        apps.innerHTML += `
+            <section class="project">
+                <div>
+                    <img class="screenshot" src=${proj.img} alt="">
                 </div>
-                <section class="project-info">
-                    <p class="project-desc">${proj.desc}</p>
-                    <div class="stack">
-                        <img src="img/html5-color.svg" alt="">
-                        <img src="img/css3-color.svg" alt="">
-                        <img src="img/javascript-color.svg" alt="">
+                <div class="inner-project-container">
+                    <h4>${proj.title}</h4>
+                    <div class="project-buttons">
+                        <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+                            <div class="visit-site">
+                                <span class="visit-icon">&#x2BC8;</span>
+                                Visit site
+                            </div>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" href=${proj.code}>
+                            <div class="view-code">
+                                <i class="fab fa-github"></i>
+                                View code
+                            </div>
+                        </a>
                     </div>
-                </section>
-            </div>
-        </section>
-    `)
+                    <section class="project-info">
+                        <p class="project-desc">${proj.desc}</p>
+                        <div id=${proj.id}-stack class="stack">${stack}</div>
+                    </section>
+                </div>
+            </section>
+        `
+    })
 }
