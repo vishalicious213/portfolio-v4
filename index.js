@@ -72,6 +72,7 @@ webBtn.addEventListener("click", () => {
     sites.classList.add("gallery")
     apps.classList.add("hidden")
     apps.classList.remove("gallery")
+    renderSites(siteArray)
 })
 
 function renderApps(arr) {
@@ -150,3 +151,5 @@ function renderSites(arr) {
         `
     })
 }
+
+renderSites(siteArray)
