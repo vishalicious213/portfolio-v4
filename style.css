@@ -265,11 +265,16 @@ main p {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 70vh;
+    height: 40vh;
+    color: white;
 }
 
-.bk-reading p {
-    background-color: rgba(40, 44, 52, .35);
+.bk-about-me {
+    display: flex;
+    align-items: center;
+}
+
+.bk-reading * {
     color: var(--main-text);
     text-shadow:
         0.05em 0 black,
