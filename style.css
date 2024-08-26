@@ -241,6 +241,13 @@ main p {
     border-radius: 50%;
 }
 
+.bk-about-me {
+    background-image: url("/img/jesus-curiel.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /* CONTACT */
 
 .contact {
