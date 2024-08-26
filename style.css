@@ -146,6 +146,12 @@ main p {
     color: var(--secondary-text);
 }
 
+.site-title {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--accent);
+}
+
 .project a {
     color: var(--secondary-text);
     text-decoration: none;

@@ -134,15 +134,7 @@ function renderSites(arr) {
                     </a>
                 </div>
                 <div class="inner-project-container">
-                    <h4>${proj.title}</h4>
-                    <div class="project-buttons">
-                        <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
-                            <div class="visit-site">
-                                <span class="visit-icon">&#x2BC8;</span>
-                                Visit site
-                            </div>
-                        </a>
-                    </div>
+                    <h4 class="site-title">${proj.title}</h4>
                     <section class="project-info">
                         <p class="project-desc">${proj.desc}</p>
                     </section>
