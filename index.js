@@ -55,7 +55,14 @@ const siteArray = [
         img: "img/projects/grill.jpg",
         title: "Vish's Grillicious Grill",
         view: "https://vish213-grill.netlify.app/",
-        desc: "At Vish's Grillicious Grill, culinary dreams take flight... and crash in a box of Chicken McNuggets! We aspire to serve home-cooked meals that delight the senses, but every parent knows how that ends. Order a meal and we'll bring out what your kids really want, too.",
+        desc: "At Vish's Grillicious Grill, culinary dreams take flight - and crash in a box of Chicken McNuggets! We aspire to serve home-cooked meals that delight the senses, but every parent knows how that ends. Order a meal and we'll bring out what your kids really want, too.",
+    },
+    {
+        id: 2,
+        img: "img/projects/bcc.jpg",
+        title: "BCC Foundation",
+        view: "https://vish213-bcc-shop.netlify.app/",
+        desc: "The Breast Cancer Comfort Foundation aims to offer encouragement, support and laughter to individuals whose lives have been forever changed by curative or preventative breast cancer treatment through the delivery of unique “Comfort Baskets” and “Chemo Comfort Bags”.",
     }
 ]
 
