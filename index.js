@@ -55,7 +55,7 @@ const siteArray = [
         img: "img/projects/grill.jpg",
         title: "Vish's Grillicious Grill",
         view: "https://vish213-grill.netlify.app/",
-        desc: "Jimmy's Diner serves the best burgers and pizzas in town. This kiosk/ordering app was prepared using the finest JavaScript and seasoned with arrays, objects and a sprinkling of CSS.",
+        desc: "At Vish's Grillicious Grill, culinary dreams take flight... and crash in a box of Chicken McNuggets! We aspire to serve home-cooked meals that delight the senses, but every parent knows how that ends. Order a meal and we'll bring out what your kids really want, too.",
     }
 ]
 
