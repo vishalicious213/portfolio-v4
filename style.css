@@ -72,13 +72,18 @@ button:hover {
 }
 
 .divider-3 {
+    background-image: linear-gradient(to right bottom, var(--secondary-back) 49%, var(--main-back) 50%);
+    height: 2rem;
+}
+
+.divider-4 {
     background-image: linear-gradient(to right bottom, var(--main-back) 49%, transparent 50%);
     position: absolute;
     height: 2rem;
     width: 100%;
 }
 
-.divider-4 {
+.divider-5 {
     background-image: linear-gradient(to right top, var(--secondary-back) 49%, transparent 50%);
     position: absolute;
     top: -2rem;
