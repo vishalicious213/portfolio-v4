@@ -48,7 +48,7 @@ const siteArray = [
         img: "img/projects/salon.jpg",
         title: "Ayesha Salon",
         view: "https://vish213-salon.netlify.app/",
-        desc: "Add or remove movies from your personal watchlist. Search for a movie and get information from the OMDB (Online Movie Database) API about it. Save the ones you want to see for later.",
+        desc: "Welcome to Ayesha Salon, where style meets comfort! Our cozy salon is your go-to destination for the latest hair trends, with a team of skilled stylists passionate about crafting the perfect look for you. Explore our website for a glimpse of our work, customer reviews, and easy booking options.",
     },
     {
         id: 2,
@@ -58,6 +58,8 @@ const siteArray = [
         desc: "Jimmy's Diner serves the best burgers and pizzas in town. This kiosk/ordering app was prepared using the finest JavaScript and seasoned with arrays, objects and a sprinkling of CSS.",
     }
 ]
+
+// ⬇️ EVENT LISTENERS ⬇️
 
 appBtn.addEventListener("click", () => {    
     apps.classList.remove("hidden")
@@ -74,6 +76,8 @@ webBtn.addEventListener("click", () => {
     apps.classList.remove("gallery")
     renderSites(siteArray)
 })
+
+// ⬇️ RENDER FUNCTIONS ⬇️
 
 function renderApps(arr) {
     apps.innerHTML = ""
