@@ -120,3 +120,33 @@ function renderApps(arr) {
         `
     })
 }
+
+function renderSites(arr) {
+    sites.innerHTML = ""
+
+    arr.map(proj => {
+        sites.innerHTML += `
+            <section class="project">
+                <div>
+                    <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+                        <img class="screenshot" src=${proj.img} alt="">
+                    </a>
+                </div>
+                <div class="inner-project-container">
+                    <h4>${proj.title}</h4>
+                    <div class="project-buttons">
+                        <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+                            <div class="visit-site">
+                                <span class="visit-icon">&#x2BC8;</span>
+                                Visit site
+                            </div>
+                        </a>
+                    </div>
+                    <section class="project-info">
+                        <p class="project-desc">${proj.desc}</p>
+                    </section>
+                </div>
+            </section>
+        `
+    })
+}
