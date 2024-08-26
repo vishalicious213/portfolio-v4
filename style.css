@@ -78,6 +78,16 @@ button:hover {
     width: 100%;
 }
 
+.divider-4 {
+    background-image: linear-gradient(to right top, var(--secondary-back) 49%, transparent 50%);
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    height: 2rem;
+    width: 100%;
+}
+
+
 .hidden {
     display: none;
 }
@@ -276,6 +286,7 @@ main p {
 
 .contact {
     background-color: var(--secondary-back);
+    position: relative;
 }
 
 form {
