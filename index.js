@@ -58,7 +58,7 @@ const siteArray = [
         desc: "At Vish's Grillicious Grill, culinary dreams take flight - and crash in a box of Chicken McNuggets! We aspire to serve home-cooked meals that delight the senses, but every parent knows how that ends. Order a meal and we'll bring out what your kids really want, too.",
     },
     {
-        id: 2,
+        id: 3,
         img: "img/projects/bcc.jpg",
         title: "BCC Foundation",
         view: "https://vish213-bcc-shop.netlify.app/",
