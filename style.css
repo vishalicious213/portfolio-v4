@@ -265,7 +265,8 @@ main p {
 }
 
 .bk-about-me {
-    background-image: url("/img/jesus-curiel.jpg");
+    /* background-image: url("/img/jesus-curiel.jpg"); */
+    background-image: url("img/pexels-rpnickson-2545122.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
