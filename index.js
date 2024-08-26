@@ -42,6 +42,23 @@ const appsArray = [
     }
 ]
 
+const siteArray = [
+    {
+        id: 1,
+        img: "img/projects/salon.jpg",
+        title: "Ayesha Salon",
+        view: "https://vish213-salon.netlify.app/",
+        desc: "Add or remove movies from your personal watchlist. Search for a movie and get information from the OMDB (Online Movie Database) API about it. Save the ones you want to see for later.",
+    },
+    {
+        id: 2,
+        img: "img/projects/grill.jpg",
+        title: "Vish's Grillicious Grill",
+        view: "https://vish213-grill.netlify.app/",
+        desc: "Jimmy's Diner serves the best burgers and pizzas in town. This kiosk/ordering app was prepared using the finest JavaScript and seasoned with arrays, objects and a sprinkling of CSS.",
+    }
+]
+
 appBtn.addEventListener("click", () => {    
     apps.classList.remove("hidden")
     apps.classList.add("gallery")
