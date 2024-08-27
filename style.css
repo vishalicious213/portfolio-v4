@@ -81,7 +81,6 @@ button:hover {
     position: absolute;
     height: 2rem;
     width: 100%;
-    outline: 1px solid red;
 }
 
 .divider-5 {
@@ -122,7 +121,7 @@ main p {
 }
 
 .main-bk {
-    background-image: url("/img/19256531_6106991.jpg");
+    background-image: url("/img/header-bk.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
