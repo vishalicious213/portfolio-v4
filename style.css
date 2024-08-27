@@ -81,6 +81,7 @@ button:hover {
     position: absolute;
     height: 2rem;
     width: 100%;
+    outline: 1px solid red;
 }
 
 .divider-5 {
@@ -92,6 +93,13 @@ button:hover {
     width: 100%;
 }
 
+.divider-6 {
+    background-image: linear-gradient(to right bottom, transparent 49%, var(--secondary-back) 50%);
+    position: absolute;
+    top: 19rem;
+    height: 2rem;
+    width: 100%;
+}
 
 .hidden {
     display: none;
@@ -100,13 +108,26 @@ button:hover {
 /* MAIN */
 
 main {
+    position: absolute;
+    top: 0;
+    width: 100%;
     text-align: center;
+    background-color: transparent;
 }
 
 main p {
     color: var(--secondary-text);
     margin-bottom: 2rem;
     padding: 0 1rem;
+}
+
+.main-bk {
+    background-image: url("/img/19256531_6106991.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 21rem;
 }
 
 /* MAIN - SOCIAL */
