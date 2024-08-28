@@ -155,4 +155,4 @@ function renderSites(arr) {
     })
 }
 
-renderSites(siteArray)
+// renderSites(siteArray)
