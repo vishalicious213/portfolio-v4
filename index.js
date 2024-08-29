@@ -2,6 +2,8 @@ const appBtn = document.getElementById("app-btn")
 const webBtn = document.getElementById("web-btn")
 const apps = document.getElementById("applications")
 const sites = document.getElementById("websites")
+// const carousel = document.getElementsByClassName("carousel-container")
+const carousel = document.getElementById("carousel")
 let slideIndex = 1
 
 const appsArray = [
@@ -66,7 +68,7 @@ const siteArray = [
         desc: "The Breast Cancer Comfort Foundation aims to offer encouragement, support and laughter to individuals whose lives have been forever changed by curative or preventative breast cancer treatment through the delivery of unique “Comfort Baskets” and “Chemo Comfort Bags”.",
     }
 ]
-
+renderCarousel(siteArray)
 // ⬇️ EVENT LISTENERS ⬇️
 
 appBtn.addEventListener("click", () => {    
@@ -156,11 +158,40 @@ function renderSites(arr) {
     })
 }
 
+function renderCarousel(arr) {
+    console.log("renderCarousel", arr)
+    carousel.innerHTML = ""
+    carousel.innerHTML = `
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    `
+    console.log(carousel)
+
+    arr.map(proj => {
+        carousel.innerHTML += `
+            <section class="project slide">
+                <div>
+                    <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+                        <img class="screenshot" src=${proj.img} alt="">
+                    </a>
+                </div>
+                <div class="inner-project-container">
+                    <h4 class="site-title">${proj.title}</h4>
+                    <section class="project-info">
+                        <p class="project-desc">${proj.desc}</p>
+                    </section>
+                </div>
+            </section>
+        `
+    })
+}
+
 function changeSlide(n) {
     showSlides(slideIndex += n)
 }
 
 function showSlides(n) {
+
     let slides = document.getElementsByClassName("slide")
     let dots = document.getElementsByClassName("dot")
     console.log(n)
@@ -186,4 +217,5 @@ function showSlides(n) {
 }
 
 // renderSites(siteArray)
+
 showSlides(slideIndex)
