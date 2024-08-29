@@ -4,7 +4,7 @@ const apps = document.getElementById("applications")
 const sites = document.getElementById("websites")
 // const carousel = document.getElementsByClassName("carousel-container")
 const carousel = document.getElementById("carousel")
-const dots = document.getElementById("dot-container")
+const dotsContainer = document.getElementById("dot-container")
 let slideIndex = 1
 
 const appsArray = [
@@ -190,11 +190,11 @@ function renderCarousel(arr) {
 }
 
 function renderDots(num) {
-    dots.innerHTML = ""
+    dotsContainer.innerHTML = ""
     
     for (i = 0; i < num; i++) {
-        dots.innerHTML += `
-            <span class="dot"></span>
+        dotsContainer.innerHTML += `
+            <span class="dot" onclick="showSlideFromDot(${i+1})"></span>
         `
     }
 }
@@ -208,6 +208,7 @@ function showSlides(n) {
     let slides = document.getElementsByClassName("slide")
     let dots = document.getElementsByClassName("dot")
     console.log(n)
+    console.log(dots)
 
     if (n > slides.length) {
         slideIndex = 1
@@ -227,6 +228,22 @@ function showSlides(n) {
 
     slides[slideIndex-1].style.display = "block"
     dots[slideIndex-1].className += " active"
+}
+
+function showSlideFromDot(n) {
+    let slides = document.getElementsByClassName("slide")
+    let dots = document.getElementsByClassName("dot")
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "")
+    }
+
+    slides[n-1].style.display = "block"
+    dots[n-1].className += " active"
 }
 
 // renderSites(siteArray)
