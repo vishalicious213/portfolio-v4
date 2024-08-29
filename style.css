@@ -255,7 +255,7 @@ main p {
 /* MY-WORK - CAROUSEL */
 
 .carousel-container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     max-width: 1000px;
     position: relative;
@@ -265,41 +265,48 @@ main p {
 .slide {
     display: none;
     width: 100%;
-    outline: 1px solid orange;
+    /* outline: 1px solid orange; */
     text-align: center;
 }
 
 .prev, .next {
     cursor: pointer;
-    position: absolute;
-    top: 50%;
+    /* position: absolute; */
+    top: 42.25%;
     width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
+    /* margin-top: -22px; */
+    padding: .5rem 1rem;
+    color: var(--secondary-text);
+    /* font-weight: bold; */
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: .5rem;
     user-select: none;
 }
 
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-    outline: 1px solid yellow;
+    /* right: 0; */
+    /* border-radius: 3px 0 0 3px; */
+    /* outline: 1px solid yellow; */
 }
 
 .prev {
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: var(--accent);
+    color: var(--main-text);
 }
 
 .carousel-controls {
-    outline: 1px solid orange;
+    /* outline: 1px solid orange; */
+    /* position: relative; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: center;
 }
 
 .dot {

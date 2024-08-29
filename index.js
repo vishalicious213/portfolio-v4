@@ -161,10 +161,10 @@ function renderSites(arr) {
 function renderCarousel(arr) {
     console.log("renderCarousel", arr)
     carousel.innerHTML = ""
-    carousel.innerHTML = `
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-    `
+    // carousel.innerHTML = `
+    //     <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    //     <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    // `
     console.log(carousel)
 
     arr.map(proj => {
