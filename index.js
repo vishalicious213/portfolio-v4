@@ -156,14 +156,14 @@ function renderSites(arr) {
     })
 }
 
-function plusSlides(n) {
-    showSlides(slideIndex =+ n)
+function changeSlide(n) {
+    showSlides(slideIndex += n)
 }
 
 function showSlides(n) {
-    let i
     let slides = document.getElementsByClassName("slide")
     let dots = document.getElementsByClassName("dot")
+    console.log(n)
 
     if (n > slides.length) {
         slideIndex = 1
