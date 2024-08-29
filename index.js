@@ -3,6 +3,7 @@ const webBtn = document.getElementById("web-btn")
 const apps = document.getElementById("applications")
 const sites = document.getElementById("websites")
 const carousel = document.getElementById("carousel")
+const carouselContainer = document.getElementById("carousel-container")
 const dotsContainer = document.getElementById("dot-container")
 let slideIndex = 1
 
@@ -159,17 +160,10 @@ function renderSites(arr) {
 }
 
 function renderCarousel(arr) {
-    carousel.innerHTML = `
-            <section class="carousel-container"></section>
-            <section class="carousel-controls">
-                <a class="prev" onclick="changeSlide(-1)">&#10094; prev</a>
-                <div id="dot-container"></div>
-                <a class="next" onclick="changeSlide(1)">next &#10095;</a>
-            </section>
-    `
+    carouselContainer.innerHTML = ``
 
     arr.map(proj => {
-        carousel.innerHTML += `
+        carouselContainer.innerHTML += `
             <section class="project slide">
                 <div>
                     <a target="_blank" rel="noopener noreferrer" href=${proj.view}>

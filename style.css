@@ -254,10 +254,6 @@ main p {
 
 /* MY-WORK - CAROUSEL */
 
-#carousel {
-    border: 1px solid yellow;
-}
-
 .carousel-container {
     width: 100%;
     max-width: 1000px;
@@ -281,7 +277,6 @@ main p {
     transition: 0.6s ease;
     border-radius: .5rem;
     user-select: none;
-    border: 1px solid orange;
 }
 
 .prev:hover, .next:hover {
@@ -290,9 +285,8 @@ main p {
 }
 
 .carousel-controls {
-    border: 10px solid red;
-    width: 100vw;
-    display: block;
+    width: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: baseline;
     text-align: center;
@@ -453,6 +447,10 @@ footer {
 }
 
 @media screen and (min-width: 640px) {
+    #carousel {
+        display: none;
+    }
+
     .work-buttons {
         max-width: 640px;
         margin: 2rem auto 0;
