@@ -159,7 +159,14 @@ function renderSites(arr) {
 }
 
 function renderCarousel(arr) {
-    carousel.innerHTML = ""
+    carousel.innerHTML = `
+            <section class="carousel-container"></section>
+            <section class="carousel-controls">
+                <a class="prev" onclick="changeSlide(-1)">&#10094; prev</a>
+                <div id="dot-container"></div>
+                <a class="next" onclick="changeSlide(1)">next &#10095;</a>
+            </section>
+    `
 
     arr.map(proj => {
         carousel.innerHTML += `
