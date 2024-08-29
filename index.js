@@ -233,6 +233,8 @@ function showSlides(n) {
 function showSlideFromDot(n) {
     let slides = document.getElementsByClassName("slide")
     let dots = document.getElementsByClassName("dot")
+    console.log(slideIndex, n)
+    slideIndex = n
 
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none"
