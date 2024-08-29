@@ -4,6 +4,7 @@ const apps = document.getElementById("applications")
 const sites = document.getElementById("websites")
 // const carousel = document.getElementsByClassName("carousel-container")
 const carousel = document.getElementById("carousel")
+const dots = document.getElementById("dot-container")
 let slideIndex = 1
 
 const appsArray = [
@@ -184,6 +185,18 @@ function renderCarousel(arr) {
             </section>
         `
     })
+
+    renderDots(arr.length)
+}
+
+function renderDots(num) {
+    dots.innerHTML = ""
+    
+    for (i = 0; i < num; i++) {
+        dots.innerHTML += `
+            <span class="dot"></span>
+        `
+    }
 }
 
 function changeSlide(n) {
