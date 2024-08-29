@@ -2,7 +2,6 @@ const appBtn = document.getElementById("app-btn")
 const webBtn = document.getElementById("web-btn")
 const apps = document.getElementById("applications")
 const sites = document.getElementById("websites")
-// const carousel = document.getElementsByClassName("carousel-container")
 const carousel = document.getElementById("carousel")
 const dotsContainer = document.getElementById("dot-container")
 let slideIndex = 1
@@ -69,7 +68,7 @@ const siteArray = [
         desc: "The Breast Cancer Comfort Foundation aims to offer encouragement, support and laughter to individuals whose lives have been forever changed by curative or preventative breast cancer treatment through the delivery of unique “Comfort Baskets” and “Chemo Comfort Bags”.",
     }
 ]
-renderCarousel(siteArray)
+
 // ⬇️ EVENT LISTENERS ⬇️
 
 appBtn.addEventListener("click", () => {    
@@ -160,13 +159,7 @@ function renderSites(arr) {
 }
 
 function renderCarousel(arr) {
-    console.log("renderCarousel", arr)
     carousel.innerHTML = ""
-    // carousel.innerHTML = `
-    //     <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    //     <a class="next" onclick="changeSlide(1)">&#10095;</a>
-    // `
-    console.log(carousel)
 
     arr.map(proj => {
         carousel.innerHTML += `
@@ -204,11 +197,8 @@ function changeSlide(n) {
 }
 
 function showSlides(n) {
-
     let slides = document.getElementsByClassName("slide")
     let dots = document.getElementsByClassName("dot")
-    console.log(n)
-    console.log(dots)
 
     if (n > slides.length) {
         slideIndex = 1
@@ -233,7 +223,6 @@ function showSlides(n) {
 function showSlideFromDot(n) {
     let slides = document.getElementsByClassName("slide")
     let dots = document.getElementsByClassName("dot")
-    console.log(slideIndex, n)
     slideIndex = n
 
     for (i = 0; i < slides.length; i++) {
@@ -249,5 +238,5 @@ function showSlideFromDot(n) {
 }
 
 // renderSites(siteArray)
-
+renderCarousel(siteArray)
 showSlides(slideIndex)
