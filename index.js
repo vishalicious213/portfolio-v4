@@ -6,6 +6,7 @@ const webBtn = document.getElementById("web-btn") // puppyBtn
 // const carouselContainer = document.getElementById("carousel-container")
 const carousel = document.getElementById("carousel-container") // carousel
 const carouselImg = document.getElementById("carousel-images") // carouselImg
+const gallery = document.getElementById("gallery-container")
 const dotsContainer = document.getElementById("dot-container") // dotsContainer
 
 const appsArray = [
@@ -104,13 +105,13 @@ webBtn.addEventListener("click", webClick)
 function appClick() {
     dataSet = appsArray
     renderCarousel(appsArray, slideIndex)
-    renderGallery(appsArray)
+    // renderGallery(appsArray)
 }
 
 function webClick() {
     dataSet = siteArray
     renderCarousel(siteArray, slideIndex)
-    renderGallery(siteArray)
+    // renderGallery(siteArray)
 }
 
 // ⬇️ RENDER FUNCTIONS ⬇️
@@ -125,13 +126,18 @@ function renderCarousel(arr, slideNum = 0) {
     //         <img src="img/${item}" alt="">
     //     </section>
     // `).join("")
-    const apps = renderApps(arr)
     // console.log(apps)
     console.log(dataSet)
     console.log(appsArray)
-
+    
     if (dataSet === appsArray) {
+        const apps = renderApps(arr)
         carouselImg.innerHTML += apps
+    }
+
+    if (dataSet === siteArray) {
+        const sites = renderSites(arr)
+        gallery.innerHTML += sites
     }
 
     let projectToShow = document.getElementsByClassName("project")[slideNum]
@@ -146,18 +152,19 @@ function renderCarousel(arr, slideNum = 0) {
 // render gallery
 function renderGallery(arr) {
     gallery.innerHTML = ""
+    const sites = renderSites(arr)
 
-    const projects = arr.map(item => `
-        <section class="gallery-critter">
-            <img src="img/${item}" alt="">
-        </section>
-    `).join("")
+    // const projects = arr.map(item => `
+    //     <section class="gallery-critter">
+    //         <img src="img/${item}" alt="">
+    //     </section>
+    // `).join("")
 
-    gallery.innerHTML += projects
+    gallery.innerHTML += sites
 }
 
 function renderApps(arr) {
-    console.log(arr)
+    // console.log(arr)
     let apps = ""
 
     arr.map(proj => {
@@ -206,27 +213,30 @@ function renderApps(arr) {
     return apps
 }
 
-// function renderSites(arr) {
-//     sites.innerHTML = ""
+function renderSites(arr) {
+    console.log(arr)
+    let sites = ""
 
-//     arr.map(proj => {
-//         sites.innerHTML += `
-//             <section class="project">
-//                 <div>
-//                     <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
-//                         <img class="screenshot" src=${proj.img} alt="">
-//                     </a>
-//                 </div>
-//                 <div class="inner-project-container">
-//                     <h4 class="site-title">${proj.title}</h4>
-//                     <section class="project-info">
-//                         <p class="project-desc">${proj.desc}</p>
-//                     </section>
-//                 </div>
-//             </section>
-//         `
-//     })
-// }
+    arr.map(proj => {
+        sites += `
+            <section class="project">
+                <div>
+                    <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+                        <img class="screenshot" src=${proj.img} alt="">
+                    </a>
+                </div>
+                <div class="inner-project-container">
+                    <h4 class="site-title">${proj.title}</h4>
+                    <section class="project-info">
+                        <p class="project-desc">${proj.desc}</p>
+                    </section>
+                </div>
+            </section>
+        `
+    })
+
+    return sites
+}
 
 // function renderCarousel(arr) {
 //     carouselContainer.innerHTML = ``
