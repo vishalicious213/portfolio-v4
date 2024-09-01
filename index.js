@@ -1,9 +1,9 @@
-const appBtn = document.getElementById("app-btn") // kittyBtn
-const webBtn = document.getElementById("web-btn") // puppyBtn
 // const apps = document.getElementById("applications")
 // const sites = document.getElementById("websites")
 // const carousel = document.getElementById("carousel")
 // const carouselContainer = document.getElementById("carousel-container")
+const appBtn = document.getElementById("app-btn") // kittyBtn
+const webBtn = document.getElementById("web-btn") // puppyBtn
 const carousel = document.getElementById("carousel-container") // carousel
 const carouselImg = document.getElementById("carousel-images") // carouselImg
 const gallery = document.getElementById("gallery-container")
@@ -81,36 +81,17 @@ let slideIndex = 1
 appBtn.addEventListener("click", appClick)
 webBtn.addEventListener("click", webClick)
 
-// appBtn.addEventListener("click", () => {  
-//     showArr = "app"  
-//     apps.classList.remove("hidden")
-//     apps.classList.add("gallery")
-//     sites.classList.add("hidden")
-//     sites.classList.remove("gallery")
-//     renderApps(appsArray)
-//     console.log(window.innerWidth)
-// })
-
-// webBtn.addEventListener("click", () => {    
-//     showArr = "web"
-//     sites.classList.remove("hidden")
-//     sites.classList.add("gallery")
-//     apps.classList.add("hidden")
-//     apps.classList.remove("gallery")
-//     renderSites(siteArray)
-// })
-
 // ⬇️ EVENT HANDLERS ⬇️
 
 function appClick() {
     dataSet = appsArray
-    renderCarousel(appsArray, slideIndex)
+    renderCarousel(dataSet, slideIndex)
     // renderGallery(appsArray)
 }
 
 function webClick() {
     dataSet = siteArray
-    renderCarousel(siteArray, slideIndex)
+    renderCarousel(dataSet, slideIndex)
     // renderGallery(siteArray)
 }
 
@@ -121,27 +102,33 @@ function renderCarousel(arr, slideNum = 0) {
     console.log(arr, slideNum)
     carouselImg.innerHTML = ""
 
-    // const projects = arr.map(item => `
-    //     <section class="carousel-critter hidden">
-    //         <img src="img/${item}" alt="">
-    //     </section>
-    // `).join("")
-    // console.log(apps)
-    console.log(dataSet)
-    console.log(appsArray)
+    // console.log(dataSet)
+    // console.log(appsArray)
     
     if (dataSet === appsArray) {
         const apps = renderApps(arr)
         carouselImg.innerHTML += apps
+
+        let appsToHide = document.getElementsByClassName("project")
+        console.log(appsToHide)
+
+        let convertedApps = Array.from(appsToHide)
+        console.log(convertedApps)
+        convertedApps.map(app => {
+            app.className = "project hidden"
+        })
     }
 
     if (dataSet === siteArray) {
         const sites = renderSites(arr)
+        sites.map(site => {
+            site.className = "project hidden"
+        })
         gallery.innerHTML += sites
     }
 
     let projectToShow = document.getElementsByClassName("project")[slideNum]
-    projectToShow.className = "carousel-critter"
+    projectToShow.className = "project"
     
     carouselImg.innerHTML = ""
     carouselImg.appendChild(projectToShow)
@@ -153,12 +140,6 @@ function renderCarousel(arr, slideNum = 0) {
 function renderGallery(arr) {
     gallery.innerHTML = ""
     const sites = renderSites(arr)
-
-    // const projects = arr.map(item => `
-    //     <section class="gallery-critter">
-    //         <img src="img/${item}" alt="">
-    //     </section>
-    // `).join("")
 
     gallery.innerHTML += sites
 }
