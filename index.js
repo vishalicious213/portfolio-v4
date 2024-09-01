@@ -102,99 +102,109 @@ webBtn.addEventListener("click", webClick)
 // ⬇️ EVENT HANDLERS ⬇️
 
 function appClick() {
+    dataSet = appsArray
     renderCarousel(appsArray, slideIndex)
     renderGallery(appsArray)
-    dataSet = appsArray
 }
 
 function webClick() {
+    dataSet = siteArray
     renderCarousel(siteArray, slideIndex)
     renderGallery(siteArray)
-    dataSet = siteArray
 }
 
 // ⬇️ RENDER FUNCTIONS ⬇️
 
 // render carousel
 function renderCarousel(arr, slideNum = 0) {
+    console.log(arr, slideNum)
     carouselImg.innerHTML = ""
 
-    const critters = arr.map(item => `
-        <section class="carousel-critter hidden">
-            <img src="img/${item}" alt="">
-        </section>
-    `).join("")
+    // const projects = arr.map(item => `
+    //     <section class="carousel-critter hidden">
+    //         <img src="img/${item}" alt="">
+    //     </section>
+    // `).join("")
+    const apps = renderApps(arr)
+    // console.log(apps)
+    console.log(dataSet)
+    console.log(appsArray)
 
-    carouselImg.innerHTML += critters
+    if (dataSet === appsArray) {
+        carouselImg.innerHTML += apps
+    }
 
-    let critterToShow = document.getElementsByClassName("carousel-critter")[slideNum]
-    critterToShow.className = "carousel-critter"
+    let projectToShow = document.getElementsByClassName("project")[slideNum]
+    projectToShow.className = "carousel-critter"
     
     carouselImg.innerHTML = ""
-    carouselImg.appendChild(critterToShow)
+    carouselImg.appendChild(projectToShow)
 
-    renderDots(arr.length)
+    // renderDots(arr.length)
 }
 
 // render gallery
 function renderGallery(arr) {
     gallery.innerHTML = ""
 
-    const critters = arr.map(item => `
+    const projects = arr.map(item => `
         <section class="gallery-critter">
             <img src="img/${item}" alt="">
         </section>
     `).join("")
 
-    gallery.innerHTML += critters
+    gallery.innerHTML += projects
 }
 
-// function renderApps(arr) {
-//     apps.innerHTML = ""
+function renderApps(arr) {
+    console.log(arr)
+    let apps = ""
 
-//     arr.map(proj => {
-//         let stack = proj.stack.map(tech => {
-//             switch (tech) {
-//                 case "html": return `<img src="img/html5.svg" title="HTML5" alt="HTML5"></img>`
-//                 case "css": return `<img src="img/css3.svg" title="CSS3" alt="CSS3"></img>`
-//                 case "js": return `<img src="img/javascript.svg" title="JavaScript" alt="JavaScript"></img>`
-//                 case "fb": return `<img src="img/firebase.svg" title="Firebase" alt="Firebase"></img>`
-//                 default: return null
-//             }
-//         }).join("")
+    arr.map(proj => {
+        let stack = proj.stack.map(tech => {
+            switch (tech) {
+                case "html": return `<img src="img/html5.svg" title="HTML5" alt="HTML5"></img>`
+                case "css": return `<img src="img/css3.svg" title="CSS3" alt="CSS3"></img>`
+                case "js": return `<img src="img/javascript.svg" title="JavaScript" alt="JavaScript"></img>`
+                case "fb": return `<img src="img/firebase.svg" title="Firebase" alt="Firebase"></img>`
+                default: return null
+            }
+        }).join("")
 
-//         apps.innerHTML += `
-//             <section class="project">
-//                 <div>
-//                     <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
-//                         <img class="screenshot" src=${proj.img} alt="">
-//                     </a>
-//                 </div>
-//                 <div class="inner-project-container">
-//                     <h4>${proj.title}</h4>
-//                     <div class="project-buttons">
-//                         <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
-//                             <div class="visit-site">
-//                                 <span class="visit-icon">&#x2BC8;</span>
-//                                 Visit site
-//                             </div>
-//                         </a>
-//                         <a target="_blank" rel="noopener noreferrer" href=${proj.code}>
-//                             <div class="view-code">
-//                                 <i class="fab fa-github"></i>
-//                                 View code
-//                             </div>
-//                         </a>
-//                     </div>
-//                     <section class="project-info">
-//                         <p class="project-desc">${proj.desc}</p>
-//                         <div class="stack">${stack}</div>
-//                     </section>
-//                 </div>
-//             </section>
-//         `
-//     })
-// }
+        apps += `
+            <section class="project">
+                <div>
+                    <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+                        <img class="screenshot" src=${proj.img} alt="">
+                    </a>
+                </div>
+                <div class="inner-project-container">
+                    <h4>${proj.title}</h4>
+                    <div class="project-buttons">
+                        <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+                            <div class="visit-site">
+                                <span class="visit-icon">&#x2BC8;</span>
+                                Visit site
+                            </div>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" href=${proj.code}>
+                            <div class="view-code">
+                                <i class="fab fa-github"></i>
+                                View code
+                            </div>
+                        </a>
+                    </div>
+                    <section class="project-info">
+                        <p class="project-desc">${proj.desc}</p>
+                        <div class="stack">${stack}</div>
+                    </section>
+                </div>
+            </section>
+        `
+    })
+
+    return apps
+}
 
 // function renderSites(arr) {
 //     sites.innerHTML = ""
