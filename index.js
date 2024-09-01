@@ -5,6 +5,7 @@ const sites = document.getElementById("websites")
 const carousel = document.getElementById("carousel")
 const carouselContainer = document.getElementById("carousel-container")
 const dotsContainer = document.getElementById("dot-container")
+let showArr = "web"
 let slideIndex = 1
 
 const appsArray = [
@@ -72,15 +73,18 @@ const siteArray = [
 
 // ⬇️ EVENT LISTENERS ⬇️
 
-appBtn.addEventListener("click", () => {    
+appBtn.addEventListener("click", () => {  
+    showArr = "app"  
     apps.classList.remove("hidden")
     apps.classList.add("gallery")
     sites.classList.add("hidden")
     sites.classList.remove("gallery")
     renderApps(appsArray)
+    console.log(window.innerWidth)
 })
 
 webBtn.addEventListener("click", () => {    
+    showArr = "web"
     sites.classList.remove("hidden")
     sites.classList.add("gallery")
     apps.classList.add("hidden")
