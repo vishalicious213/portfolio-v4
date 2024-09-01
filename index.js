@@ -1,12 +1,12 @@
-const appBtn = document.getElementById("app-btn")
-const webBtn = document.getElementById("web-btn")
-const apps = document.getElementById("applications")
-const sites = document.getElementById("websites")
-const carousel = document.getElementById("carousel")
-const carouselContainer = document.getElementById("carousel-container")
-const dotsContainer = document.getElementById("dot-container")
-let showArr = "web"
-let slideIndex = 1
+const appBtn = document.getElementById("app-btn") // kittyBtn
+const webBtn = document.getElementById("web-btn") // puppyBtn
+// const apps = document.getElementById("applications")
+// const sites = document.getElementById("websites")
+// const carousel = document.getElementById("carousel")
+// const carouselContainer = document.getElementById("carousel-container")
+const carousel = document.getElementById("carousel-container") // carousel
+const carouselImg = document.getElementById("carousel-images") // carouselImg
+const dotsContainer = document.getElementById("dot-container") // dotsContainer
 
 const appsArray = [
     {
@@ -70,6 +70,10 @@ const siteArray = [
         desc: "The Breast Cancer Comfort Foundation aims to offer encouragement, support and laughter to individuals whose lives have been forever changed by curative or preventative breast cancer treatment through the delivery of unique “Comfort Baskets” and “Chemo Comfort Bags”.",
     }
 ]
+
+// let showArr = "web"
+let dataSet = siteArray // dataSet
+let slideIndex = 1
 
 // ⬇️ EVENT LISTENERS ⬇️
 
