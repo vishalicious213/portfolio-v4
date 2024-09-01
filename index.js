@@ -77,175 +77,192 @@ let slideIndex = 1
 
 // ⬇️ EVENT LISTENERS ⬇️
 
-appBtn.addEventListener("click", () => {  
-    showArr = "app"  
-    apps.classList.remove("hidden")
-    apps.classList.add("gallery")
-    sites.classList.add("hidden")
-    sites.classList.remove("gallery")
-    renderApps(appsArray)
-    console.log(window.innerWidth)
-})
+appBtn.addEventListener("click", appClick)
+webBtn.addEventListener("click", webClick)
 
-webBtn.addEventListener("click", () => {    
-    showArr = "web"
-    sites.classList.remove("hidden")
-    sites.classList.add("gallery")
-    apps.classList.add("hidden")
-    apps.classList.remove("gallery")
-    renderSites(siteArray)
-})
+// appBtn.addEventListener("click", () => {  
+//     showArr = "app"  
+//     apps.classList.remove("hidden")
+//     apps.classList.add("gallery")
+//     sites.classList.add("hidden")
+//     sites.classList.remove("gallery")
+//     renderApps(appsArray)
+//     console.log(window.innerWidth)
+// })
+
+// webBtn.addEventListener("click", () => {    
+//     showArr = "web"
+//     sites.classList.remove("hidden")
+//     sites.classList.add("gallery")
+//     apps.classList.add("hidden")
+//     apps.classList.remove("gallery")
+//     renderSites(siteArray)
+// })
+
+// ⬇️ EVENT HANDLERS ⬇️
+
+function appClick() {
+    renderCarousel(appsArray, slideIndex)
+    renderGallery(appsArray)
+    dataSet = appsArray
+}
+
+function webClick() {
+    renderCarousel(siteArray, slideIndex)
+    renderGallery(siteArray)
+    dataSet = siteArray
+}
 
 // ⬇️ RENDER FUNCTIONS ⬇️
 
-function renderApps(arr) {
-    apps.innerHTML = ""
+// function renderApps(arr) {
+//     apps.innerHTML = ""
 
-    arr.map(proj => {
-        let stack = proj.stack.map(tech => {
-            switch (tech) {
-                case "html": return `<img src="img/html5.svg" title="HTML5" alt="HTML5"></img>`
-                case "css": return `<img src="img/css3.svg" title="CSS3" alt="CSS3"></img>`
-                case "js": return `<img src="img/javascript.svg" title="JavaScript" alt="JavaScript"></img>`
-                case "fb": return `<img src="img/firebase.svg" title="Firebase" alt="Firebase"></img>`
-                default: return null
-            }
-        }).join("")
+//     arr.map(proj => {
+//         let stack = proj.stack.map(tech => {
+//             switch (tech) {
+//                 case "html": return `<img src="img/html5.svg" title="HTML5" alt="HTML5"></img>`
+//                 case "css": return `<img src="img/css3.svg" title="CSS3" alt="CSS3"></img>`
+//                 case "js": return `<img src="img/javascript.svg" title="JavaScript" alt="JavaScript"></img>`
+//                 case "fb": return `<img src="img/firebase.svg" title="Firebase" alt="Firebase"></img>`
+//                 default: return null
+//             }
+//         }).join("")
 
-        apps.innerHTML += `
-            <section class="project">
-                <div>
-                    <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
-                        <img class="screenshot" src=${proj.img} alt="">
-                    </a>
-                </div>
-                <div class="inner-project-container">
-                    <h4>${proj.title}</h4>
-                    <div class="project-buttons">
-                        <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
-                            <div class="visit-site">
-                                <span class="visit-icon">&#x2BC8;</span>
-                                Visit site
-                            </div>
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href=${proj.code}>
-                            <div class="view-code">
-                                <i class="fab fa-github"></i>
-                                View code
-                            </div>
-                        </a>
-                    </div>
-                    <section class="project-info">
-                        <p class="project-desc">${proj.desc}</p>
-                        <div class="stack">${stack}</div>
-                    </section>
-                </div>
-            </section>
-        `
-    })
-}
+//         apps.innerHTML += `
+//             <section class="project">
+//                 <div>
+//                     <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+//                         <img class="screenshot" src=${proj.img} alt="">
+//                     </a>
+//                 </div>
+//                 <div class="inner-project-container">
+//                     <h4>${proj.title}</h4>
+//                     <div class="project-buttons">
+//                         <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+//                             <div class="visit-site">
+//                                 <span class="visit-icon">&#x2BC8;</span>
+//                                 Visit site
+//                             </div>
+//                         </a>
+//                         <a target="_blank" rel="noopener noreferrer" href=${proj.code}>
+//                             <div class="view-code">
+//                                 <i class="fab fa-github"></i>
+//                                 View code
+//                             </div>
+//                         </a>
+//                     </div>
+//                     <section class="project-info">
+//                         <p class="project-desc">${proj.desc}</p>
+//                         <div class="stack">${stack}</div>
+//                     </section>
+//                 </div>
+//             </section>
+//         `
+//     })
+// }
 
-function renderSites(arr) {
-    sites.innerHTML = ""
+// function renderSites(arr) {
+//     sites.innerHTML = ""
 
-    arr.map(proj => {
-        sites.innerHTML += `
-            <section class="project">
-                <div>
-                    <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
-                        <img class="screenshot" src=${proj.img} alt="">
-                    </a>
-                </div>
-                <div class="inner-project-container">
-                    <h4 class="site-title">${proj.title}</h4>
-                    <section class="project-info">
-                        <p class="project-desc">${proj.desc}</p>
-                    </section>
-                </div>
-            </section>
-        `
-    })
-}
+//     arr.map(proj => {
+//         sites.innerHTML += `
+//             <section class="project">
+//                 <div>
+//                     <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+//                         <img class="screenshot" src=${proj.img} alt="">
+//                     </a>
+//                 </div>
+//                 <div class="inner-project-container">
+//                     <h4 class="site-title">${proj.title}</h4>
+//                     <section class="project-info">
+//                         <p class="project-desc">${proj.desc}</p>
+//                     </section>
+//                 </div>
+//             </section>
+//         `
+//     })
+// }
 
-function renderCarousel(arr) {
-    carouselContainer.innerHTML = ``
+// function renderCarousel(arr) {
+//     carouselContainer.innerHTML = ``
 
-    arr.map(proj => {
-        carouselContainer.innerHTML += `
-            <section class="project slide">
-                <div>
-                    <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
-                        <img class="screenshot" src=${proj.img} alt="">
-                    </a>
-                </div>
-                <div class="inner-project-container">
-                    <h4 class="site-title">${proj.title}</h4>
-                    <section class="project-info">
-                        <p class="project-desc">${proj.desc}</p>
-                    </section>
-                </div>
-            </section>
-        `
-    })
+//     arr.map(proj => {
+//         carouselContainer.innerHTML += `
+//             <section class="project slide">
+//                 <div>
+//                     <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+//                         <img class="screenshot" src=${proj.img} alt="">
+//                     </a>
+//                 </div>
+//                 <div class="inner-project-container">
+//                     <h4 class="site-title">${proj.title}</h4>
+//                     <section class="project-info">
+//                         <p class="project-desc">${proj.desc}</p>
+//                     </section>
+//                 </div>
+//             </section>
+//         `
+//     })
 
-    renderDots(arr.length)
-}
+//     renderDots(arr.length)
+// }
 
-function renderDots(num) {
-    dotsContainer.innerHTML = ""
+// function renderDots(num) {
+//     dotsContainer.innerHTML = ""
     
-    for (i = 0; i < num; i++) {
-        dotsContainer.innerHTML += `
-            <span class="dot" onclick="showSlideFromDot(${i+1})"></span>
-        `
-    }
-}
+//     for (i = 0; i < num; i++) {
+//         dotsContainer.innerHTML += `
+//             <span class="dot" onclick="showSlideFromDot(${i+1})"></span>
+//         `
+//     }
+// }
 
-function changeSlide(n) {
-    showSlides(slideIndex += n)
-}
+// function changeSlide(n) {
+//     showSlides(slideIndex += n)
+// }
 
-function showSlides(n) {
-    let slides = document.getElementsByClassName("slide")
-    let dots = document.getElementsByClassName("dot")
+// function showSlides(n) {
+//     let slides = document.getElementsByClassName("slide")
+//     let dots = document.getElementsByClassName("dot")
 
-    if (n > slides.length) {
-        slideIndex = 1
-    }
+//     if (n > slides.length) {
+//         slideIndex = 1
+//     }
 
-    if (n < 1) {
-        slideIndex = slides.length
-    }
+//     if (n < 1) {
+//         slideIndex = slides.length
+//     }
 
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"
-    }
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none"
+//     }
 
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "")
-    }
+//     for (i = 0; i < dots.length; i++) {
+//         dots[i].className = dots[i].className.replace(" active", "")
+//     }
 
-    slides[slideIndex-1].style.display = "block"
-    dots[slideIndex-1].className += " active"
-}
+//     slides[slideIndex-1].style.display = "block"
+//     dots[slideIndex-1].className += " active"
+// }
 
-function showSlideFromDot(n) {
-    let slides = document.getElementsByClassName("slide")
-    let dots = document.getElementsByClassName("dot")
-    slideIndex = n
+// function showSlideFromDot(n) {
+//     let slides = document.getElementsByClassName("slide")
+//     let dots = document.getElementsByClassName("dot")
+//     slideIndex = n
 
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"
-    }
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none"
+//     }
 
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "")
-    }
+//     for (i = 0; i < dots.length; i++) {
+//         dots[i].className = dots[i].className.replace(" active", "")
+//     }
 
-    slides[n-1].style.display = "block"
-    dots[n-1].className += " active"
-}
+//     slides[n-1].style.display = "block"
+//     dots[n-1].className += " active"
+// }
 
 // renderSites(siteArray)
-renderCarousel(siteArray)
-showSlides(slideIndex)
+// renderCarousel(siteArray)
+// showSlides(slideIndex)
