@@ -95,6 +95,10 @@ function webClick() {
     // renderGallery(siteArray)
 }
 
+function changeSlide(n) {
+    console.log("changeSlide", n)
+}
+
 // ⬇️ RENDER FUNCTIONS ⬇️
 
 // render carousel
@@ -102,8 +106,9 @@ function renderCarousel(arr, slideNum = 0) {
     console.log(arr, slideNum)
     carouselImg.innerHTML = ""
 
-    // console.log(dataSet)
-    // console.log(appsArray)
+    console.log(dataSet)
+    console.log(appsArray)
+    console.log(siteArray)
     
     if (dataSet === appsArray) {
         const apps = renderApps(arr)
@@ -114,6 +119,7 @@ function renderCarousel(arr, slideNum = 0) {
 
         let convertedApps = Array.from(appsToHide)
         console.log(convertedApps)
+
         convertedApps.map(app => {
             app.className = "project hidden"
         })
@@ -121,10 +127,18 @@ function renderCarousel(arr, slideNum = 0) {
 
     if (dataSet === siteArray) {
         const sites = renderSites(arr)
-        sites.map(site => {
+        carousel.innerHTML += sites
+
+        let sitesToHide = document.getElementsByClassName("project")
+        console.log(sitesToHide)
+    
+        let convertedSites = Array.from(sitesToHide)
+        console.log(convertedSites)
+
+        convertedSites.map(site => {
             site.className = "project hidden"
         })
-        gallery.innerHTML += sites
+        // carousel.innerHTML += sites
     }
 
     let projectToShow = document.getElementsByClassName("project")[slideNum]
