@@ -95,6 +95,16 @@ function changeSlide(n) {
 // render carousel
 function renderCarousel(arr, slideNum = 0) {
     console.log("renderCarousel", arr, slideNum)
+
+    if (dataSet === appsArray) {
+        console.log("rendering apps")
+    }
+
+    if (dataSet === siteArray) {
+        console.log("rendering sites")
+    }
+
+
     // carouselImg.innerHTML = ""
 
     // const critters = arr.map(item => `
