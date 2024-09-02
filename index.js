@@ -80,12 +80,14 @@ function appClick() {
     console.log("app-btn clicked")
     dataSet = appsArray
     renderCarousel(dataSet, slideIndex)
+    renderGallery(dataSet)
 }
 
 function webClick() {
     console.log("web-btn clicked")
     dataSet = siteArray
     renderCarousel(dataSet, slideIndex)
+    renderGallery(dataSet)
 }
 
 function changeSlide(n) {
@@ -154,6 +156,29 @@ function renderDots(num) {
         dotsContainer.innerHTML += `
             <span class="dot" onclick="changeSlideFromDots(${i})"></span>
         `
+    }
+}
+
+// render gallery
+function renderGallery(arr) {
+    gallery.innerHTML = ""
+
+    if (dataSet === appsArray) {
+        console.log("rendering apps")
+        const apps = renderApps(arr)
+        gallery.innerHTML += apps
+        let appsToShow = document.querySelectorAll(".project-app")
+        appsToShow.forEach(item => item.className = "project project-app")
+        gallery.innerHTML += appsToShow
+    }
+
+    if (dataSet === siteArray) {
+        console.log("rendering sites")
+        const sites = renderSites(arr)
+        gallery.innerHTML += sites
+        let sitesToShow = document.querySelectorAll(".project-site")
+        sitesToShow.forEach(item => item.className = "project project-site")
+        gallery.innerHTML += sitesToShow
     }
 }
 
