@@ -157,13 +157,13 @@ main p {
     margin-top: 2rem;
 }
 
-.gallery {
+/* .gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
     gap: 2rem;
-}
+} */
 
 .gallery-container {
     display: none;
@@ -461,15 +461,20 @@ footer {
     }
 
     .gallery-container {
-        display: block;
+        outline: 1px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 1rem;
     }
 
-    .gallery {
+    /* .gallery {
         flex-direction: row;
         justify-content: flex-start;
         align-items: stretch;
         flex-wrap: wrap;
-    }
+    } */
 
     .project {
         width: 47%;
@@ -520,10 +525,10 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
-    .gallery {
+    /* .gallery {
         width: 90%;
         margin: 2rem auto 0;
-    }
+    } */
 
     .project {
         width: 31%;

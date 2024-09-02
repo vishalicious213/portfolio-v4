@@ -259,3 +259,6 @@ function renderApps(arr) {
 
     return apps
 }
+
+renderCarousel(dataSet, slideIndex)
+renderGallery(dataSet)
