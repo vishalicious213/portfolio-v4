@@ -117,6 +117,8 @@ function renderCarousel(arr, slideNum = 0) {
 
     if (dataSet === appsArray) {
         console.log("rendering apps")
+        const apps = renderApps(arr)
+        carouselImg.innerHTML += apps
     }
 
     if (dataSet === siteArray) {
@@ -171,4 +173,54 @@ function renderSites(arr) {
     })
 
     return sites
+}
+
+function renderApps(arr) {
+    console.log(arr)
+    let apps = ""
+
+    arr.map(proj => {
+        let stack = proj.stack.map(tech => {
+            switch (tech) {
+                case "html": return `<img src="img/html5.svg" title="HTML5" alt="HTML5"></img>`
+                case "css": return `<img src="img/css3.svg" title="CSS3" alt="CSS3"></img>`
+                case "js": return `<img src="img/javascript.svg" title="JavaScript" alt="JavaScript"></img>`
+                case "fb": return `<img src="img/firebase.svg" title="Firebase" alt="Firebase"></img>`
+                default: return null
+            }
+        }).join("")
+
+        apps += `
+            <section class="project project-app">
+                <div>
+                    <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+                        <img class="screenshot" src=${proj.img} alt="">
+                    </a>
+                </div>
+                <div class="inner-project-container">
+                    <h4>${proj.title}</h4>
+                    <div class="project-buttons">
+                        <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+                            <div class="visit-site">
+                                <span class="visit-icon">&#x2BC8;</span>
+                                Visit site
+                            </div>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" href=${proj.code}>
+                            <div class="view-code">
+                                <i class="fab fa-github"></i>
+                                View code
+                            </div>
+                        </a>
+                    </div>
+                    <section class="project-info">
+                        <p class="project-desc">${proj.desc}</p>
+                        <div class="stack">${stack}</div>
+                    </section>
+                </div>
+            </section>
+        `
+    })
+
+    return apps
 }
