@@ -104,6 +104,11 @@ function renderCarousel(arr, slideNum = 0) {
         console.log("rendering sites")
         const sites = renderSites(arr)
         carouselImg.innerHTML += sites
+        let siteToShow = document.getElementsByClassName("project-site")[slideNum]
+        siteToShow.className = "project project-site"
+
+        carouselImg.innerHTML = ""
+        carouselImg.appendChild(siteToShow)
     }
 
 
@@ -132,7 +137,7 @@ function renderSites(arr) {
 
     arr.map(proj => {
         sites += `
-            <section class="project">
+            <section class="project project-site hidden">
                 <div>
                     <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
                         <img class="screenshot" src=${proj.img} alt="">
