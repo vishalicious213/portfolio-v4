@@ -165,6 +165,10 @@ main p {
     gap: 2rem;
 }
 
+.gallery-container {
+    display: none;
+}
+
 /* MY-WORK - PROJECTS */
 
 .project {
@@ -255,7 +259,7 @@ main p {
 /* MY-WORK - CAROUSEL */
 
 .carousel-container {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     width: 100%;
     max-width: 1000px;
     position: relative;
@@ -286,7 +290,7 @@ main p {
 }
 
 .carousel-controls {
-    outline: 1px solid orange;
+    /* outline: 1px solid orange; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -449,13 +453,17 @@ footer {
 }
 
 @media screen and (min-width: 640px) {
-    #carousel {
+    .carousel-container {
         display: none;
     }
 
     .work-buttons {
         max-width: 640px;
         margin: 2rem auto 0;
+    }
+
+    .gallery-container {
+        display: block;
     }
 
     .gallery {
