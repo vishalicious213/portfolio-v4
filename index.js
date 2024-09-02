@@ -64,6 +64,7 @@ const siteArray = [
     }
 ]
 
+let slideIndex = 0
 let dataSet = appsArray
 
 // ⬇️ EVENT LISTENERS ⬇️
@@ -75,7 +76,7 @@ webBtn.addEventListener("click", webClick)
 
 function appClick() {
     console.log("app-btn clicked")
-    // dataSet = appsArray
+    dataSet = appsArray
     // renderCarousel(dataSet, slideIndex)
 }
 
