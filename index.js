@@ -1,3 +1,6 @@
+const appBtn = document.getElementById("app-btn")
+const webBtn = document.getElementById("web-btn")
+
 // ⬇️ EVENT LISTENERS ⬇️
 
 // ⬇️ EVENT HANDLERS ⬇️
