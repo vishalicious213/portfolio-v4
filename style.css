@@ -254,7 +254,7 @@ main p {
     width: 100%;
     max-width: 1000px;
     position: relative;
-    margin: auto;
+    margin: 2rem auto 0;
 }
 
 .slide {
@@ -517,6 +517,10 @@ footer {
 }
 
 @media screen and (min-width: 1500px) {
+    .gallery-container {
+        max-width: 1500px;
+    }
+
     .project {
         width: 23%;
     }
