@@ -2,6 +2,7 @@ const appBtn = document.getElementById("app-btn")
 const webBtn = document.getElementById("web-btn")
 const carouselImg = document.getElementById("carousel-images")
 const dotsContainer = document.getElementById("dot-container")
+const gallery = document.getElementById("gallery-container")
 
 const appsArray = [
     {
