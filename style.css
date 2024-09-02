@@ -259,7 +259,6 @@ main p {
 /* MY-WORK - CAROUSEL */
 
 .carousel-container {
-    /* outline: 1px solid red; */
     width: 100%;
     max-width: 1000px;
     position: relative;
@@ -290,7 +289,6 @@ main p {
 }
 
 .carousel-controls {
-    /* outline: 1px solid orange; */
     width: 100%;
     display: flex;
     justify-content: space-between;
