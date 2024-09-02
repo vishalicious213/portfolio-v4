@@ -149,6 +149,7 @@ function renderCarousel(arr, slideNum = 0) {
     renderDots(arr.length)
 }
 
+// dot controls for carousel
 function renderDots(num) {
     dotsContainer.innerHTML = ""
     
@@ -182,6 +183,7 @@ function renderGallery(arr) {
     }
 }
 
+// make website cards for carousel & gallery
 function renderSites(arr) {
     console.log(arr)
     let sites = ""
@@ -207,6 +209,7 @@ function renderSites(arr) {
     return sites
 }
 
+// make application cards for carousel & gallery
 function renderApps(arr) {
     console.log(arr)
     let apps = ""
