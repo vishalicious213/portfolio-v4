@@ -119,6 +119,11 @@ function renderCarousel(arr, slideNum = 0) {
         console.log("rendering apps")
         const apps = renderApps(arr)
         carouselImg.innerHTML += apps
+        let appToShow = document.getElementsByClassName("project-app")[slideNum]
+        appToShow.className = "project project-app"
+
+        carouselImg.innerHTML = ""
+        carouselImg.appendChild(appToShow)
     }
 
     if (dataSet === siteArray) {
@@ -191,7 +196,7 @@ function renderApps(arr) {
         }).join("")
 
         apps += `
-            <section class="project project-app">
+            <section class="project project-app hidden">
                 <div>
                     <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
                         <img class="screenshot" src=${proj.img} alt="">
