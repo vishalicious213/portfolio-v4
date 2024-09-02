@@ -120,7 +120,7 @@ function renderCarousel(arr, slideNum = 0) {
     if (dataSet === appsArray) {
         const apps = renderApps(arr)
         carouselImg.innerHTML += apps
-        let appToShow = document.getElementsByClassName("project-app")[slideNum]
+        let appToShow = document.querySelectorAll(".project-app")[slideNum]
         appToShow.className = "project project-app"
 
         carouselImg.innerHTML = ""
@@ -130,7 +130,7 @@ function renderCarousel(arr, slideNum = 0) {
     if (dataSet === siteArray) {
         const sites = renderSites(arr)
         carouselImg.innerHTML += sites
-        let siteToShow = document.getElementsByClassName("project-site")[slideNum]
+        let siteToShow = document.querySelectorAll(".project-site")[slideNum]
         siteToShow.className = "project project-site"
 
         carouselImg.innerHTML = ""
@@ -157,18 +157,16 @@ function renderGallery(arr) {
 
     if (dataSet === appsArray) {
         const apps = renderApps(arr)
-        gallery.innerHTML += apps
+        gallery.innerHTML = apps
         let appsToShow = document.querySelectorAll(".project-app")
         appsToShow.forEach(item => item.className = "project project-app")
-        gallery.innerHTML += appsToShow
     }
 
     if (dataSet === siteArray) {
         const sites = renderSites(arr)
-        gallery.innerHTML += sites
+        gallery.innerHTML = sites
         let sitesToShow = document.querySelectorAll(".project-site")
         sitesToShow.forEach(item => item.className = "project project-site")
-        gallery.innerHTML += sitesToShow
     }
 }
 
