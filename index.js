@@ -1,6 +1,7 @@
 const appBtn = document.getElementById("app-btn")
 const webBtn = document.getElementById("web-btn")
 const carouselImg = document.getElementById("carousel-images")
+const dotsContainer = document.getElementById("dot-container")
 
 const appsArray = [
     {
@@ -108,6 +109,11 @@ function changeSlide(n) {
     }
 }
 
+function changeSlideFromDots(n) {
+    slideIndex = n
+    renderCarousel(dataSet, slideIndex)
+}
+
 // ⬇️ RENDER FUNCTIONS ⬇️
 
 // render carousel
@@ -137,7 +143,17 @@ function renderCarousel(arr, slideNum = 0) {
         carouselImg.appendChild(siteToShow)
     }
 
-    // renderDots(arr.length)
+    renderDots(arr.length)
+}
+
+function renderDots(num) {
+    dotsContainer.innerHTML = ""
+    
+    for (i = 0; i < num; i++) {
+        dotsContainer.innerHTML += `
+            <span class="dot" onclick="changeSlideFromDots(${i})"></span>
+        `
+    }
 }
 
 function renderSites(arr) {
