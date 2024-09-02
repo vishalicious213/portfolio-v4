@@ -102,6 +102,8 @@ function renderCarousel(arr, slideNum = 0) {
 
     if (dataSet === siteArray) {
         console.log("rendering sites")
+        const sites = renderSites(arr)
+        carouselImg.innerHTML += sites
     }
 
 
@@ -122,4 +124,29 @@ function renderCarousel(arr, slideNum = 0) {
     // carouselImg.appendChild(critterToShow)
 
     // renderDots(arr.length)
+}
+
+function renderSites(arr) {
+    console.log(arr)
+    let sites = ""
+
+    arr.map(proj => {
+        sites += `
+            <section class="project">
+                <div>
+                    <a target="_blank" rel="noopener noreferrer" href=${proj.view}>
+                        <img class="screenshot" src=${proj.img} alt="">
+                    </a>
+                </div>
+                <div class="inner-project-container">
+                    <h4 class="site-title">${proj.title}</h4>
+                    <section class="project-info">
+                        <p class="project-desc">${proj.desc}</p>
+                    </section>
+                </div>
+            </section>
+        `
+    })
+
+    return sites
 }
