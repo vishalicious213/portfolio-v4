@@ -88,6 +88,24 @@ function webClick() {
 
 function changeSlide(n) {
     console.log("changeSlide", n)
+
+    if (n === 1) {
+        slideIndex ++
+        console.log("changeSlide ++", n)
+        if (slideIndex > dataSet.length - 1) {
+            slideIndex = 0
+        }
+        renderCarousel(dataSet, slideIndex)
+    }
+
+    if (n === -1) {
+        slideIndex --
+        console.log("changeSlide --", n)
+        if (slideIndex < 0) {
+            slideIndex = dataSet.length - 1
+        }
+        renderCarousel(dataSet, slideIndex)
+    }
 }
 
 // ⬇️ RENDER FUNCTIONS ⬇️
@@ -95,6 +113,7 @@ function changeSlide(n) {
 // render carousel
 function renderCarousel(arr, slideNum = 0) {
     console.log("renderCarousel", arr, slideNum)
+    carouselImg.innerHTML = ""
 
     if (dataSet === appsArray) {
         console.log("rendering apps")
@@ -111,8 +130,6 @@ function renderCarousel(arr, slideNum = 0) {
         carouselImg.appendChild(siteToShow)
     }
 
-
-    // carouselImg.innerHTML = ""
 
     // const critters = arr.map(item => `
     //     <section class="carousel-critter hidden">
