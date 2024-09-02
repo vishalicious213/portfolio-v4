@@ -77,13 +77,13 @@ webBtn.addEventListener("click", webClick)
 function appClick() {
     console.log("app-btn clicked")
     dataSet = appsArray
-    // renderCarousel(dataSet, slideIndex)
+    renderCarousel(dataSet, slideIndex)
 }
 
 function webClick() {
     console.log("web-btn clicked")
-    // dataSet = siteArray
-    // renderCarousel(dataSet, slideIndex)
+    dataSet = siteArray
+    renderCarousel(dataSet, slideIndex)
 }
 
 function changeSlide(n) {
@@ -94,21 +94,22 @@ function changeSlide(n) {
 
 // render carousel
 function renderCarousel(arr, slideNum = 0) {
-    carouselImg.innerHTML = ""
+    console.log("renderCarousel", arr, slideNum)
+    // carouselImg.innerHTML = ""
 
-    const critters = arr.map(item => `
-        <section class="carousel-critter hidden">
-            <img src="img/${item}" alt="">
-        </section>
-    `).join("")
+    // const critters = arr.map(item => `
+    //     <section class="carousel-critter hidden">
+    //         <img src="img/${item}" alt="">
+    //     </section>
+    // `).join("")
 
-    carouselImg.innerHTML += critters
+    // carouselImg.innerHTML += critters
 
-    let critterToShow = document.getElementsByClassName("carousel-critter")[slideNum]
-    critterToShow.className = "carousel-critter"
+    // let critterToShow = document.getElementsByClassName("carousel-critter")[slideNum]
+    // critterToShow.className = "carousel-critter"
     
-    carouselImg.innerHTML = ""
-    carouselImg.appendChild(critterToShow)
+    // carouselImg.innerHTML = ""
+    // carouselImg.appendChild(critterToShow)
 
     // renderDots(arr.length)
 }
