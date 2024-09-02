@@ -77,25 +77,20 @@ webBtn.addEventListener("click", webClick)
 // ⬇️ EVENT HANDLERS ⬇️
 
 function appClick() {
-    console.log("app-btn clicked")
     dataSet = appsArray
     renderCarousel(dataSet, slideIndex)
     renderGallery(dataSet)
 }
 
 function webClick() {
-    console.log("web-btn clicked")
     dataSet = siteArray
     renderCarousel(dataSet, slideIndex)
     renderGallery(dataSet)
 }
 
 function changeSlide(n) {
-    console.log("changeSlide", n)
-
     if (n === 1) {
         slideIndex ++
-        console.log("changeSlide ++", n)
         if (slideIndex > dataSet.length - 1) {
             slideIndex = 0
         }
@@ -104,7 +99,6 @@ function changeSlide(n) {
 
     if (n === -1) {
         slideIndex --
-        console.log("changeSlide --", n)
         if (slideIndex < 0) {
             slideIndex = dataSet.length - 1
         }
@@ -121,11 +115,9 @@ function changeSlideFromDots(n) {
 
 // render carousel
 function renderCarousel(arr, slideNum = 0) {
-    console.log("renderCarousel", arr, slideNum)
     carouselImg.innerHTML = ""
 
     if (dataSet === appsArray) {
-        console.log("rendering apps")
         const apps = renderApps(arr)
         carouselImg.innerHTML += apps
         let appToShow = document.getElementsByClassName("project-app")[slideNum]
@@ -136,7 +128,6 @@ function renderCarousel(arr, slideNum = 0) {
     }
 
     if (dataSet === siteArray) {
-        console.log("rendering sites")
         const sites = renderSites(arr)
         carouselImg.innerHTML += sites
         let siteToShow = document.getElementsByClassName("project-site")[slideNum]
@@ -165,7 +156,6 @@ function renderGallery(arr) {
     gallery.innerHTML = ""
 
     if (dataSet === appsArray) {
-        console.log("rendering apps")
         const apps = renderApps(arr)
         gallery.innerHTML += apps
         let appsToShow = document.querySelectorAll(".project-app")
@@ -174,7 +164,6 @@ function renderGallery(arr) {
     }
 
     if (dataSet === siteArray) {
-        console.log("rendering sites")
         const sites = renderSites(arr)
         gallery.innerHTML += sites
         let sitesToShow = document.querySelectorAll(".project-site")
@@ -185,7 +174,6 @@ function renderGallery(arr) {
 
 // make website cards for carousel & gallery
 function renderSites(arr) {
-    console.log(arr)
     let sites = ""
 
     arr.map(proj => {
@@ -211,7 +199,6 @@ function renderSites(arr) {
 
 // make application cards for carousel & gallery
 function renderApps(arr) {
-    console.log(arr)
     let apps = ""
 
     arr.map(proj => {
