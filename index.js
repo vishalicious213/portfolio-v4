@@ -67,7 +67,7 @@ const siteArray = [
 ]
 
 let slideIndex = 0
-let dataSet = appsArray
+let dataSet = siteArray
 
 // ⬇️ EVENT LISTENERS ⬇️
 
