@@ -7,15 +7,6 @@ const gallery = document.getElementById("gallery-container")
 const appsArray = [
     {
         id: 1,
-        img: "img/projects/movies.jpg",
-        title: "Movies Watchlist",
-        view: "https://vish213-movies.netlify.app/",
-        code: "https://github.com/vishalicious213/movies",
-        desc: "Add or remove movies from your personal watchlist. Search for a movie and get information from the OMDB (Online Movie Database) API about it. Save the ones you want to see for later.",
-        stack: ["html", "css", "js"]
-    },
-    {
-        id: 2,
         img: "img/projects/jimmys-diner.jpg",
         title: "Jimmy's Diner",
         view: "https://vish213-jimmys-diner.netlify.app/",
@@ -24,9 +15,19 @@ const appsArray = [
         stack: ["html", "css", "js"]
     },
     {
+        
+        id: 2,
+        img: "img/projects/movies.jpg",
+        title: "Watch This!",
+        view: "https://vish213-movies.netlify.app/",
+        code: "https://github.com/vishalicious213/movies",
+        desc: "Add or remove movies from your personal watchlist. Search for a movie and get information from the OMDB (Online Movie Database) API about it. Save the ones you want to see for later.",
+        stack: ["html", "css", "js"]
+    },
+    {
         id: 3,
         img: "img/projects/locator.jpg",
-        title: "Locator App",
+        title: "Where the Heck?!",
         view: "https://vish213-locator.netlify.app/",
         code: "https://github.com/vishalicious213/locator",
         desc: "I built this Progressive Web App after moving to CA and never knowing what city I was driving through. It shows the city, local map and weather using Open Weather API and the Google Maps API.",
@@ -35,7 +36,7 @@ const appsArray = [
     {
         id: 4,
         img: "img/projects/task-list.jpg",
-        title: "Task List",
+        title: "Do It Meow!",
         view: "https://vish213-task-list.netlify.app/",
         code: "https://github.com/vishalicious213/tasks-firebase",
         desc: "A combination shopping list, to-do list and notes app that I built for my family of cat girls. It uses the Firebase Realtime Database to store and update data so changes are visible to everyone immediately.",
