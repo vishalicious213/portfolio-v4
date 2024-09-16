@@ -163,9 +163,18 @@ main p {
     background-color: var(--secondary-back);
 }
 
+.pitch button {
+    margin-bottom: 0;
+}
+
 .pitch-btn-container {
     display: flex;
     margin-top: 2rem;
+}
+
+.pitch-btn-container a {
+    width: 100%;
+    display: inline-block;
 }
 
 /* MY-WORK */
@@ -453,7 +462,7 @@ footer {
         margin: 2rem auto 0;
     }
 
-    .pitch button {
+    .pitch-btn-container a {
         max-width: 48%;
     }
 
