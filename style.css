@@ -156,6 +156,7 @@ main p {
 
 .social a:hover {
     color: var(--main-text);
+    transition-duration: .25s;
 }
 
 /* PITCH */
