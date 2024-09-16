@@ -3,6 +3,7 @@
     --secondary-text: #DCDCDC;
     --main-back: #282C34;
     --secondary-back: #4c5c96;
+    --secondary-back2: #3c4975;
     --third-back: #353849;
     --accent: #414a65;
     --accent2: #778899;
@@ -51,16 +52,16 @@ button:hover {
     background-color: var(--accent);
     color: var(--main-text);
     cursor: pointer;
+    transition-duration: .25s;
 }
 
 .contact-button {
-    background-color: var(--accent);
     color: var(--secondary-text);
     border: 1px solid var(--secondary-text);
 }
 
 .contact-button:hover {
-    background-color: var(--main-back);
+    background-color: var(--secondary-back2);
     color: var(--main-text);
     border: 1px solid var(--main-text);
 }
@@ -417,8 +418,12 @@ input {
     margin-bottom: 1.5rem;
 }
 
+::placeholder {
+    color: var(--secondary-text)
+}
+
 .field {
-    background: var(--accent);
+    background: var(--secondary-back2);
     color: var(--main-text);
     outline: none;
     border: 1px solid var(--secondary-text);
@@ -433,6 +438,14 @@ input {
 textarea {
     width: 100%;
     margin: 0 0 1.5rem;
+}
+
+.contact .contact-button {
+    background-color: var(--secondary-back2);
+}
+
+.contact .contact-button:hover {
+    background-color: var(--third-back);
 }
 
 .contact .social {
