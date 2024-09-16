@@ -421,6 +421,10 @@ textarea {
     border: 1px solid var(--main-text);
 }
 
+.contact .social {
+    text-align: center;
+}
+
 /* FOOTER */
 
 footer {
