@@ -53,6 +53,18 @@ button:hover {
     cursor: pointer;
 }
 
+.contact-button {
+    background-color: var(--accent);
+    color: var(--secondary-text);
+    border: 1px solid var(--secondary-text);
+}
+
+.contact-button:hover {
+    background-color: var(--main-back);
+    color: var(--main-text);
+    border: 1px solid var(--main-text);
+}
+
 .container {
     padding: 2rem 1rem;
 }
@@ -149,6 +161,11 @@ main p {
 
 .pitch {
     background-color: var(--secondary-back);
+}
+
+.pitch-btn-container {
+    display: flex;
+    margin-top: 2rem;
 }
 
 /* MY-WORK */
@@ -409,7 +426,7 @@ textarea {
     margin: 0 0 1.5rem;
 }
 
-.contact button {
+/* .contact button {
     background-color: var(--accent);
     color: var(--secondary-text);
     border: 1px solid var(--secondary-text);
@@ -419,7 +436,7 @@ textarea {
     background-color: var(--main-back);
     color: var(--main-text);
     border: 1px solid var(--main-text);
-}
+} */
 
 .contact .social {
     text-align: center;
@@ -447,6 +464,17 @@ footer {
 }
 
 @media screen and (min-width: 640px) {
+    .pitch-btn-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2rem;
+    }
+    
+    .pitch button {
+        max-width: 310px;
+        /* margin-right: 2.5rem; */
+    }
+
     .carousel-container {
         display: none;
     }
