@@ -46,6 +46,8 @@ button {
     outline: none;
     background-color: transparent;
     color: var(--secondary-text);
+    display: flex;
+    justify-content: center;
 }
 
 button:hover {
@@ -64,6 +66,15 @@ button:hover {
     background-color: var(--secondary-back2);
     color: var(--main-text);
     border: 1px solid var(--main-text);
+}
+
+.btn-icon {
+    width: 1rem;
+    margin-right: .5rem;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
